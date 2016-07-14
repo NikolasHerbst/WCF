@@ -18,5 +18,6 @@ public enum ForecastStrategyEnum {
 	ARIMA101,
 	ARIMA,
 	TBATS,
+	NNAR,		
 	INACT 		//deactivated
 }

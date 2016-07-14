@@ -14,6 +14,7 @@ import tools.descartes.wcf.forecasting.strategies.CSForecaster;
 import tools.descartes.wcf.forecasting.strategies.CrostonForecaster;
 import tools.descartes.wcf.forecasting.strategies.ETSForecaster;
 import tools.descartes.wcf.forecasting.strategies.MeanForecaster;
+import tools.descartes.wcf.forecasting.strategies.NNARForecaster;
 import tools.descartes.wcf.forecasting.strategies.NaiveForecaster;
 import tools.descartes.wcf.forecasting.strategies.SESForecaster;
 import tools.descartes.wcf.forecasting.strategies.TBATSForecaster;
@@ -50,6 +51,9 @@ public class ForecasterFactory {
 				break;
 			case TBATS:		
 				forecaster = new TBATSForecaster(ts,alpha);
+				break;
+			case NNAR:		
+				forecaster = new NNARForecaster(ts);
 				break;
 			case INACT: return null;
 		}
