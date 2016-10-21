@@ -49,7 +49,7 @@ public class ClassificationUtility{
 				//sum of absolute differences between an observation and its previous observation (quality of naive forecast) 
 				double sum1 = 0;
 				for(int i = 1; i<observations1.length;i++){
-					sum1 += Math.abs(observations1[0]-observations1[i]);
+					sum1 += Math.abs(observations1[i-1]-observations1[i]);
 				}
 				double naive1 = sum1/(observations1.length-1);		
 				/*calculation of the sum of absolute errors between a forecasted value 
